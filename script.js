@@ -115,9 +115,11 @@ function updateSplitLines() {
     console.log("Scaler:",imgHeight/fullImgHeight, imgHeight, fullImgHeight)
     splitLinesContainer.innerHTML = '';
     heights.forEach(height => {
-        const line = document.createElement('div');
-        line.style.top = `${(containerHeight - imgHeight) / 2 + height * (imgHeight/fullImgHeight)}px`;
-        splitLinesContainer.appendChild(line);
+        if (height<fullImgHeight) {
+            const line = document.createElement('div');
+            line.style.top = `${(containerHeight - imgHeight) / 2 + height * (imgHeight/fullImgHeight)}px`;
+            splitLinesContainer.appendChild(line);
+        }
     });
 }
 
