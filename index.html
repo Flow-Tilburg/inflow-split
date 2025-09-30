@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InFlow Splitter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="upload.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="settings">
+            <h1><span style="color:#f7d61c">In</span><span style="color:#2596be">Flow</span> Splitter</h1>
+            <div class="drop-zone">
+                <input type="file" id="imageInput" accept="image/*">
+                <p>Drag and drop an image here or click to upload</p>
+            </div>
+            <div>
+                <label for="splitInput">Split Heights (in pixels, comma-separated): </label>
+                <input type="text" id="splitInput" placeholder="e.g., 100,200,300">
+            </div>
+            <div id="downloadButtons">
+                <!-- <button id="splitButton">Split Image</button> -->
+                <button class="button" id="downloadZipButton">Split & Download</button>
+            </div>
+        </div>
+        <div id="image-container" class="image-container">
+            <img id="imageDisplay" alt="Selected Image">
+            <div id="splitLines"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
